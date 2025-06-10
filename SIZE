@@ -16,8 +16,8 @@ c
                                      
       parameter (lelg= 210*14*40  )          ! max total number of elements
 c      parameter (lelg= 25*10*4  )          ! max total number of elements
-      parameter (lpmin=256)              ! min MPI ranks
-      parameter (lpmax=10000)           ! max MPI ranks
+      parameter (lpmin=16)              ! min MPI ranks
+      parameter (lpmax=16)           ! max MPI ranks
       parameter (ldimt=34)              ! max auxiliary fields (temperature + scalars)
 
       ! OPTIONAL

@@ -3,17 +3,17 @@
 #
 [GENERAL]
 #startFrom = rs6blasius0.f00001
-stopAt = endTime
+stopAt = numSteps
 
-endTime  = 100000
+numSteps = 0
 
-variableDT = yes
+variableDT = no
 #dT = 0.01
 targetCFL = 0.3
 timeStepper = bdf3
 
-writeControl = runTime
-writeInterval = 100000
+writeControl = timeStep
+writeInterval = 0
 
 [PROBLEMTYPE]
 equation = incompNS
