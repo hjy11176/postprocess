@@ -1,0 +1,318 @@
+#
+# nek parameter file
+#
+[GENERAL]
+#startFrom = rs6blasius0.f00001
+stopAt = endTime
+
+endTime  = 100000
+
+variableDT = yes
+#dT = 0.01
+targetCFL = 0.3
+timeStepper = bdf3
+
+writeControl = runTime
+writeInterval = 100000
+
+[PROBLEMTYPE]
+equation = incompNS
+
+[PRESSURE]
+#preconditioner=semg_amg
+residualTol = 1e-5
+residualProj = yes
+
+[VELOCITY]
+residualTol = 1e-8
+density = 1.
+viscosity = -450
+#viscosity = -3000
+#viscosity = 1e-5
+
+#[MESH]
+#numberOfBCFields = 1
+
+
+[TEMPERATURE] # Pr = 2
+#conjugateHeatTransfer = yes 
+rhoCp = 1.
+conductivity = -900
+#conductivity = 1e-5
+residualTol = 1e-06
+
+
+# Isothermal scalar fields 
+
+[SCALAR01] # Pr = 1
+residualTol = 1e-06
+density = 1
+diffusivity = -450 # 1/(Re*Sc)
+
+[SCALAR02] # Pr = 0.71
+residualTol = 1e-06
+density = 1
+diffusivity = -319.5 # 1/(Re*Sc)
+
+[SCALAR03] # Pr = 0.5
+residualTol = 1e-06
+density = 1
+diffusivity = -225 # 1/(Re*Sc)
+
+[SCALAR04] # Pr = 0.35
+residualTol = 1e-06
+density = 1
+diffusivity = -157.5  # 1/(Re*Sc)
+
+[SCALAR05] # Pr = 0.3
+residualTol = 1e-06
+density = 1
+diffusivity = -135  # 1/(Re*Sc)
+
+[SCALAR06] # Pr = 0.25
+residualTol = 1e-06
+density = 1
+diffusivity = -112.5  # 1/(Re*Sc)
+
+[SCALAR07] # Pr = 0.2 Xe-Ne
+residualTol = 1e-06
+density = 1
+diffusivity = -90  # 1/(Re*Sc)
+
+[SCALAR08] # Pr = 0.1
+residualTol = 1e-06
+density = 1
+diffusivity = -45  # 1/(Re*Sc)
+
+[SCALAR09] # Pr = 0.0237 Lead
+residualTol = 1e-06
+density = 1
+diffusivity = -10.665  # 1/(Re*Sc)
+
+[SCALAR10] # Pr = 0.0413 Lithium 
+residualTol = 1e-06
+density = 1
+diffusivity = -18.585 # 1/(Re*Sc)
+
+#[SCALAR11] # Pr = 0.0237 Lead (M.P.)  
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -10.665  # 1/(Re*Sc)
+
+[SCALAR11] # Pr = 0.0232 LBE alloy 
+residualTol = 1e-06
+density = 1
+diffusivity = -10.44  # 1/(Re*Sc)
+
+[SCALAR12] # Pr = 0.021 Galinstan
+residualTol = 1e-06
+density = 1
+diffusivity = -9.45  # 1/(Re*Sc)
+
+[SCALAR13] # Pr = 0.0107 Mercury
+residualTol = 1e-06
+density = 1
+diffusivity = -4.815 # 1/(Re*Sc)
+
+[SCALAR14] # Pr = 0.0085 Na-K alloy 
+residualTol = 1e-06
+density = 1
+diffusivity = -3.825  # 1/(Re*Sc)
+
+[SCALAR15] # Pr = 0.0058 Sodium 
+residualTol = 1e-06
+density = 1
+diffusivity = -2.61 # 1/(Re*Sc)
+
+#[SCALAR15] # Pr = 0.001
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -0.45  # 1/(Re*Sc)
+
+# Isoflux scalar fields 
+
+[SCALAR16] # Pr = 2
+residualTol = 1e-06
+density = 1
+diffusivity = -900 # 1/(Re*Sc)
+
+[SCALAR17] # Pr = 1
+residualTol = 1e-06
+density = 1
+diffusivity = -450 # 1/(Re*Sc)
+
+[SCALAR18] # Pr = 0.71
+residualTol = 1e-06
+density = 1
+diffusivity = -319.5 # 1/(Re*Sc)
+
+[SCALAR19] # Pr = 0.5
+residualTol = 1e-06
+density = 1
+diffusivity = -225 # 1/(Re*Sc)
+
+[SCALAR20] # Pr = 0.35
+residualTol = 1e-06
+density = 1
+diffusivity = -157.5  # 1/(Re*Sc)
+
+[SCALAR21] # Pr = 0.3
+residualTol = 1e-06
+density = 1
+diffusivity = -135  # 1/(Re*Sc)
+
+[SCALAR22] # Pr = 0.25
+residualTol = 1e-06
+density = 1
+diffusivity = -112.5  # 1/(Re*Sc)
+
+[SCALAR23] # Pr = 0.2 Xe-Ne
+residualTol = 1e-06
+density = 1
+diffusivity = -90  # 1/(Re*Sc)
+
+[SCALAR24] # Pr = 0.1
+residualTol = 1e-06
+density = 1
+diffusivity = -45  # 1/(Re*Sc)
+
+[SCALAR25] # Pr = 0.0237
+residualTol = 1e-06
+density = 1
+diffusivity = -10.665  # 1/(Re*Sc)
+
+[SCALAR26] # Pr = 0.0413 Lithium 
+residualTol = 1e-06
+density = 1
+diffusivity = -18.585 # 1/(Re*Sc)
+
+#[SCALAR29] # Pr = 0.0237 Lead (M.P.)  
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -10.665  # 1/(Re*Sc)
+
+[SCALAR27] # Pr = 0.0232 LBE alloy 
+residualTol = 1e-06
+density = 1
+diffusivity = -10.44  # 1/(Re*Sc)
+
+[SCALAR28] # Pr = 0.021 Galinstan
+residualTol = 1e-06
+density = 1
+diffusivity = -9.45  # 1/(Re*Sc)
+
+[SCALAR29] # Pr = 0.0107 Mercury
+residualTol = 1e-06
+density = 1
+diffusivity = -4.815 # 1/(Re*Sc)
+
+[SCALAR30] # Pr = 0.0085 Na-K alloy 
+residualTol = 1e-06
+density = 1
+diffusivity = -3.825  # 1/(Re*Sc)
+
+[SCALAR31] # Pr = 0.0058 Sodium 
+residualTol = 1e-06
+density = 1
+diffusivity = -2.61 # 1/(Re*Sc)
+
+#[SCALAR32] # Pr = 0.001
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -0.45  # 1/(Re*Sc)
+
+# Placeholders
+
+[SCALAR32] # lambda
+solver = none
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -45.3 # 1/(Re*Sc)
+
+[SCALAR33] # vorticityu
+solver = none
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -11.325 # 1/(Re*Sc)
+
+#[SCALAR34] # vorticityv
+#solver = none
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -11.325 # 1/(Re*Sc)
+
+#[SCALAR35] # vorticityw
+#solver = none
+#residualTol = 1e-06
+#density = 1
+#diffusivity = -11.325 # 1/(Re*Sc)
+
+
+
+
+
+#
+[_RUNPAR]               # Runtime parameter section for rprm module
+PARFWRITE            = no                     # Do we write runtime parameter file
+PARFNAME             = outparfile             # Runtime parameter file name for output (without .par)
+#
+[_MONITOR]              # Runtime parameter section for monitor module
+LOGLEVEL             = 4                      # Logging threshold for toolboxes
+WALLTIME             = 70:00                  # Simulation wall time
+#
+[_CHKPOINT]             # Runtime paramere section for checkpoint module
+READCHKPT            = no                     # Restat from checkpoint
+CHKPFNUMBER          = 1                      # Restart file number
+CHKPINTERVAL         = 1000                    # Checkpiont saving frequency (number of time steps)
+#
+
+
+[_TRIPPING]             # Runtime paramere section for tripping module
+NLINE                = 1                      # Number of tripping lines
+TIAMP                = 0.15000000E-01         # Time independent amplitude
+TDAMP                = 0.250000000E-01         # Time dependent amplitude
+SPOSX01              = 10.0000000E+00         # Starting pont X
+SPOSY01              = 0.00000000E+00         # Starting pont Y
+SPOSZ01              = 0.00000000E+00         # Starting pont Z
+EPOSX01              = 10.0000000E+00         # Ending pont X
+EPOSY01              = 0.00000000E+00         # Ending pont Y
+EPOSZ01              = 32.0000000E+00         # Ending pont Z
+SMTHX01              = 8.000000E+00         # Smoothing length X
+SMTHY01              = 1.000000E+00         # Smoothing length Y
+SMTHZ01              = 0.00000000E+00         # Smoothing length Z
+ROTA01               = 0.12300000E+00         # Rotation angle in radians
+NMODE01              = 48                     # Number of Fourier modes
+TDT01                = 4.000000E+00         # Time step for tripping
+#SPOSX02              = 10.80000000E+00         # Starting pont X
+#SPOSY02              = 0.00000000E+00          # Starting pont Y
+#SPOSZ02              = 0.00000000E+00         # Starting pont Z
+#EPOSX02              = 10.80000000E+00         # Ending pont X
+#EPOSY02              = 0.00000000E+00          # Ending pont Y
+#EPOSZ02              = 2.0000000E+00         # Ending pont Z
+#SMTHX02              = 0.82000000E+00         # Smoothing length X
+#SMTHY02              = 0.20600000E+00         # Smoothing length Y
+#SMTHZ02              = 0.00000000E+00         # Smoothing length Z
+#ROTA02               = 0.12300000E+00         # Rotation angle in radians
+#NMODE02              = 76                     # Number of Fourier modes
+#TDT02                = 4.000000E+00         # Time step for tripping
+
+
+
+[_SPONGEBX]
+strength = 0.5
+widthlx = 0.0
+widthly = 0.0
+widthlz = 0.0
+widthrx = 5.0
+widthry = 0.0
+widthrz = 0.0
+droplx = 0.0
+droply = 0.0
+droplz = 0.0
+droprx = 1.0
+dropry = 0.0
+droprz = 0.0
+
+
+
+

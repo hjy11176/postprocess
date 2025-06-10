@@ -1,0 +1,50 @@
+-3                     spatial dimension (will create box.re2)
+35                      number of fields
+#
+#    comments: test case
+#
+#========================================================
+#
+Box                                    nowall
+-210 -14 -24                            Nelx  Nely
+0.0 350 1                              x0 x1 ratio
+0.0 30 1.28                            y0 y1 ratio
+0.0 32 1                               z0 z1 ratio
+v  ,o  ,W  ,SYM,P  ,P  ,                               BC's:  (cbx0, cbx1, cby0, cby1, cbz0, cbz1)
+# Isothermal wall
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 2
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 1
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.71
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.5
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.35
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.3
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.25
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.2
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.1
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0237 Lead 
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0413 Lithium 
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0232 LBE alloy
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.021  Galistan
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0107 Mercury
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0085 Na-K alloy 
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0058 Sodium 
+# Isoflux wall
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 2
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 1
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.71
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.5
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.35
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.3
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.25
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.2
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.1
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0237 Lead
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0413 Lithium  
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0232 LBE alloy
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.021  Galistan
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0107 Mercury
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0085 Na-K alloy 
+t  ,O  ,f  ,t  ,P  ,P  ,      T bc's  !  Pr = 0.0058 Sodium  
+# Placeholders 
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  lambda2
+t  ,O  ,t  ,t  ,P  ,P  ,      T bc's  !  vorticity

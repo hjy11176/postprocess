@@ -1,0 +1,8 @@
+.state
+blasius.f
+blasius.ma2
+blasius.nek5000
+blasius.re2
+*.log
+makefile
+obj/
